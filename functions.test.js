@@ -37,3 +37,29 @@ describe("Given a function", () => {
     });
   });
 });
+
+import { unshiftMethod } from "./functions";
+describe("Given a function", () => {
+  describe("When we have an array [1, 2]", () => {
+    test("Then if item is 'a', it should return ['a', 1, 2].", () => {
+      // Arrange
+      const a = [1, 2];
+      const b = "a";
+      const expected = ["a", 1, 2];
+      // Act
+      const result = unshiftMethod(a, b);
+      // Asert
+      expect(result).toEqual(expected);
+    });
+    test("Then if array = [] and last item is 1, it should return [1].", () => {
+      // Arrange
+      const a = [];
+      const b = 1;
+      const expected = [1];
+      // Act
+      const result = unshiftMethod(a, b);
+      // Asert
+      expect(result).toEqual(expected);
+    });
+  });
+});

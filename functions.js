@@ -9,3 +9,14 @@ export const lengthMethod = (arr) => {
 };
 
 export const popMethod = (arr) => arr[lengthMethod(arr) - 1];
+
+export const unshiftMethod = (arr, item) => {
+  const resultArr = [];
+  resultArr[0] = item;
+
+  for (let i = 0; i < lengthMethod(arr); i++) {
+    resultArr[lengthMethod(resultArr)] = arr[i];
+  }
+
+  return resultArr;
+};
