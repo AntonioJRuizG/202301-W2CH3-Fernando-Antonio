@@ -1,4 +1,9 @@
-import { lengthMethod } from "./functions";
+import {
+  lengthMethod,
+  popMethod,
+  unshiftMethod,
+  shiftMethod,
+} from "./functions";
 
 describe.skip("Given an array of undetermined length", () => {
   describe("When we have an array", () => {
@@ -14,7 +19,6 @@ describe.skip("Given an array of undetermined length", () => {
   });
 });
 
-import { popMethod } from "./functions";
 describe("Given a function", () => {
   describe("When we have an array", () => {
     test("Then if last item is 1, it should return 1.", () => {
@@ -38,7 +42,6 @@ describe("Given a function", () => {
   });
 });
 
-import { unshiftMethod } from "./functions";
 describe("Given a function", () => {
   describe("When we have an array [1, 2]", () => {
     test("Then if item is 'a', it should return ['a', 1, 2].", () => {
@@ -64,7 +67,6 @@ describe("Given a function", () => {
   });
 });
 
-import { shiftMethod } from "./functions";
 describe("Given a function", () => {
   describe("When we have an array", () => {
     test("Then if array = [1,2], it should return 1.", () => {
