@@ -63,3 +63,28 @@ describe("Given a function", () => {
     });
   });
 });
+
+import { shiftMethod } from "./functions";
+describe("Given a function", () => {
+  describe("When we have an array", () => {
+    test("Then if array = [1,2], it should return 1.", () => {
+      // Arrange
+      const a = [1, 2];
+
+      const expected = 1;
+      // Act
+      const result = shiftMethod(a);
+      // Asert
+      expect(result).toEqual(expected);
+    });
+    test("Then if array = [] it should return undefined.", () => {
+      // Arrange
+      const a = [];
+      const expected = undefined;
+      // Act
+      const result = shiftMethod(a);
+      // Asert
+      expect(result).toEqual(expected);
+    });
+  });
+});
