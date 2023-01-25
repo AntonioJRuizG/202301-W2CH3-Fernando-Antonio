@@ -20,3 +20,14 @@ export const unshiftMethod = (arr, item) => {
 
   return resultArr;
 };
+
+export const shiftMethod = (arr) => {
+  const resultArr = [];
+  const resultItem = arr[0];
+
+  for (let i = 0; i < lengthMethod(arr) - 1; i++) {
+    resultArr[i] = arr[i + 1];
+  }
+
+  return resultItem;
+};
