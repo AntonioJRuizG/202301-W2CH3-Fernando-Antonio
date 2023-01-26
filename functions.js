@@ -35,9 +35,41 @@ export const shiftMethod = (arr) => {
 };
 
 export const someMethod = (arr, item) => {
-  for (let i = 0; i < lengthMethod(arr) - 1; i++) {
-    if ((arr[i] = item)) return true;
+  for (let i = 0; i < lengthMethod(arr); i++) {
+    if (arr[i] === item) return true;
   }
 
   return false;
+};
+
+export const everyMethod = (arr, item, condition) => {
+  if (condition === '<') {
+    for (let i = 0; i < lengthMethod(arr); i++) {
+      if (arr[i] < item) return true;
+    }
+  }
+
+  if (condition === '>') {
+    for (let i = 0; i < lengthMethod(arr); i++) {
+      if (arr[i] > item) return true;
+    }
+  }
+
+  return false;
+};
+
+export const findMethod = (arr, item, condition) => {
+  if (condition === '<') {
+    for (let i = 0; i < lengthMethod(arr); i++) {
+      if (arr[i] < item) return arr[i];
+    }
+  }
+
+  if (condition === '>') {
+    for (let i = 0; i < lengthMethod(arr); i++) {
+      if (arr[i] > item) return arr[i];
+    }
+  }
+
+  return undefined;
 };
