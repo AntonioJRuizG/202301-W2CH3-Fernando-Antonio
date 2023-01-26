@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest --watchAll --coverage",
-    "test:prod": "jest --coverage --watchAll=false",
+    "test": "jest ",
     "prepare": "husky install"
   },
   "author": "AJRuiz",
