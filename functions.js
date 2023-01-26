@@ -29,5 +29,15 @@ export const shiftMethod = (arr) => {
     resultArr[i] = arr[i + 1];
   }
 
+  arr = resultArr;
+
   return resultItem;
+};
+
+export const someMethod = (arr, item) => {
+  for (let i = 0; i < lengthMethod(arr) - 1; i++) {
+    if ((arr[i] = item)) return true;
+  }
+
+  return false;
 };
