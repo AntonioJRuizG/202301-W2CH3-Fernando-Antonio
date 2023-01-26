@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Challenge 2, week 2",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll --coverage",
+    "test:prod": "jest --coverage --watchAll=false",
+    "prepare": "husky install"
   },
   "author": "AJRuiz",
   "license": "ISC",
