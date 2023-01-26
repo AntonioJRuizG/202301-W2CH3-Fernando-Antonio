@@ -29,8 +29,6 @@ export const shiftMethod = (arr) => {
     resultArr[i] = arr[i + 1];
   }
 
-  arr = resultArr;
-
   return resultItem;
 };
 
