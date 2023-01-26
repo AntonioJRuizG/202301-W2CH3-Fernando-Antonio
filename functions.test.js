@@ -5,7 +5,7 @@ import {
   shiftMethod,
 } from "./functions";
 
-describe.skip("Given an array of undetermined length", () => {
+describe("Given an array of undetermined length", () => {
   describe("When we have an array", () => {
     test("Then if length is 4, it should return 4.", () => {
       // Arrange
@@ -19,7 +19,7 @@ describe.skip("Given an array of undetermined length", () => {
   });
 });
 
-describe("Given a function", () => {
+describe("Given a pop function", () => {
   describe("When we have an array", () => {
     test("Then if last item is 1, it should return 1.", () => {
       // Arrange
@@ -42,7 +42,7 @@ describe("Given a function", () => {
   });
 });
 
-describe("Given a function", () => {
+describe("Given a unshiftMethod function", () => {
   describe("When we have an array [1, 2]", () => {
     test("Then if item is 'a', it should return ['a', 1, 2].", () => {
       // Arrange
@@ -67,7 +67,7 @@ describe("Given a function", () => {
   });
 });
 
-describe("Given a function", () => {
+describe("Given a shiftMethod function", () => {
   describe("When we have an array", () => {
     test("Then if array = [1,2], it should return 1.", () => {
       // Arrange
