@@ -1,12 +1,4 @@
-import {
-  lengthMethod,
-  popMethod,
-  unshiftMethod,
-  shiftMethod,
-  someMethod,
-  everyMethod,
-  findMethod,
-} from './functions';
+import * as m from './functions';
 
 describe('Given an array of undetermined length', () => {
   describe('When we have an array', () => {
@@ -15,7 +7,7 @@ describe('Given an array of undetermined length', () => {
       const a = [1, null, 'hola', 0];
       const expected = 4;
       // Act
-      const result = lengthMethod(a);
+      const result = m.lengthMethod(a);
       // Asert
       expect(result).toBe(expected);
     });
@@ -29,7 +21,7 @@ describe('Given a pop function', () => {
       const a = [1, null, 'hola', 1];
       const expected = 1;
       // Act
-      const result = popMethod(a);
+      const result = m.popMethod(a);
       // Asert
       expect(result).toEqual(expected);
     });
@@ -38,7 +30,7 @@ describe('Given a pop function', () => {
       const a = [];
       const expected = undefined;
       // Act
-      const result = popMethod(a);
+      const result = m.popMethod(a);
       // Asert
       expect(result).toEqual(expected);
     });
@@ -53,7 +45,7 @@ describe('Given a unshiftMethod function', () => {
       const b = 'a';
       const expected = ['a', 1, 2];
       // Act
-      const result = unshiftMethod(a, b);
+      const result = m.unshiftMethod(a, b);
       // Asert
       expect(result).toEqual(expected);
     });
@@ -63,7 +55,7 @@ describe('Given a unshiftMethod function', () => {
       const b = 1;
       const expected = [1];
       // Act
-      const result = unshiftMethod(a, b);
+      const result = m.unshiftMethod(a, b);
       // Asert
       expect(result).toEqual(expected);
     });
@@ -78,7 +70,7 @@ describe('Given a shiftMethod function', () => {
 
       const expected = 1;
       // Act
-      const result = shiftMethod(a);
+      const result = m.shiftMethod(a);
       // Asert
       expect(result).toEqual(expected);
     });
@@ -87,7 +79,7 @@ describe('Given a shiftMethod function', () => {
       const a = [];
       const expected = undefined;
       // Act
-      const result = shiftMethod(a);
+      const result = m.shiftMethod(a);
       // Asert
       expect(result).toEqual(expected);
     });
@@ -102,7 +94,7 @@ describe('Given a someMethod function', () => {
       const b = 3;
       const expected = false;
       // Act
-      const result = someMethod(a, b);
+      const result = m.someMethod(a, b);
       // Asert
       expect(result).toEqual(expected);
     });
@@ -112,7 +104,7 @@ describe('Given a someMethod function', () => {
       const b = 'a';
       const expected = false;
       // Act
-      const result = someMethod(a, b);
+      const result = m.someMethod(a, b);
       // Asert
       expect(result).toEqual(expected);
     });
@@ -122,7 +114,7 @@ describe('Given a someMethod function', () => {
       const b = 'a';
       const expected = true;
       // Act
-      const result = someMethod(a, b);
+      const result = m.someMethod(a, b);
       // Asert
       expect(result).toEqual(expected);
     });
@@ -138,7 +130,7 @@ describe('Given a every Method function', () => {
       const c = '<';
       const expected = true;
       // Act
-      const result = everyMethod(a, b, c);
+      const result = m.everyMethod(a, b, c);
       // Asert
       expect(result).toEqual(expected);
     });
@@ -149,14 +141,14 @@ describe('Given a every Method function', () => {
       const c = '>';
       const expected = false;
       // Act
-      const result = someMethod(a, b, c);
+      const result = m.someMethod(a, b, c);
       // Asert
       expect(result).toEqual(expected);
     });
   });
 });
 
-describe.only('Given a find Method function', () => {
+describe('Given a find Method function', () => {
   describe('When we have an array, a condition and a number', () => {
     test('Then if array = [1,2] number= 3 and condition = < it should return 1.', () => {
       // Arrange
@@ -165,7 +157,7 @@ describe.only('Given a find Method function', () => {
       const c = '<';
       const expected = 1;
       // Act
-      const result = findMethod(a, b, c);
+      const result = m.findMethod(a, b, c);
       // Asert
       expect(result).toEqual(expected);
     });
@@ -176,7 +168,7 @@ describe.only('Given a find Method function', () => {
       const c = '>';
       const expected = 5;
       // Act
-      const result = findMethod(a, b, c);
+      const result = m.findMethod(a, b, c);
       // Asert
       expect(result).toEqual(expected);
     });
@@ -187,7 +179,7 @@ describe.only('Given a find Method function', () => {
       const c = '>';
       const expected = undefined;
       // Act
-      const result = findMethod(a, b, c);
+      const result = m.findMethod(a, b, c);
       // Asert
       expect(result).toEqual(expected);
     });
